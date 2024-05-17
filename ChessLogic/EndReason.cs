@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    public enum MoveType
+    public enum EndReason
     {
-        Normal,
-        CastleKS,
-        CastleQS,
-        DoublePawn,
-        EnPassant,
-        PawnPromotion
+        Checkmate,
+        Stalemate,
+        FiftyMoveRule,
+        InsufficientMaterial,
+        ThreefoldRepetition
     }
 }
