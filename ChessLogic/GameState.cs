@@ -11,11 +11,13 @@ namespace ChessLogic
         public Board Board { get;  }
         public Player CurrentPlayer { get; private set; }
         public Result Result { get; private set; } = null;
+        private AIChess aiChess;
 
         public GameState(Player player, Board board)
         {
             CurrentPlayer = player;
             Board = board;
+            aiChess = AIChess.Instance;
 
         }
 
@@ -37,6 +39,11 @@ namespace ChessLogic
             move.Execute(Board);
             CurrentPlayer = CurrentPlayer.Opponent();
             CheckForGameOver();
+
+            if (CurrentPlayer == Player.Black)
+            {
+                MakeAIMove();
+            }
         }
 
         public IEnumerable<Move> AllLegalMovesFor(Player player)
@@ -69,5 +76,18 @@ namespace ChessLogic
             return Result != null;
         }
 
+       private void MakeAIMove()
+        {
+            Move bestMove = aiChess.GetBestMove(this);
+            if (bestMove != null)
+            {
+                MakeMove(bestMove);
+            }
+        }
+
+        public void SwitchPlayer()
+        {
+            CurrentPlayer = (CurrentPlayer == Player.White) ? Player.Black : Player.White;
+        }
     }
 }
