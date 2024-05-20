@@ -14,10 +14,10 @@
         // Private constructor for the singleton pattern
         private AIChess()
         {
-            maxDepth = 3;
+            maxDepth = 3; // Can only maximum depth is 3
         }
 
-        // Public method to get the best move for the current game state
+    
         public Move GetBestMove(GameState gameState)
         {
             // Call the Minimax algorithm to get the best move, starting at the maximum depth and assuming the AI is the maximizing player
@@ -110,10 +110,9 @@
             }
         }
 
-        // Simulate a move and return the new game state
         private GameState SimulateMove(GameState gameState, Move move)
         {
-            // Create a new game state as a copy of the current state
+            // Copy the game state and update it
             GameState newState = new GameState(gameState.CurrentPlayer, gameState.Board.Copy());
 
             // Make the move on the new game state
