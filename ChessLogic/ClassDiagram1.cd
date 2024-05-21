@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChessLogic.Moves.Castle" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAASEAAAAAAAAAAAAAAAAIQQAAAAAAAA=</HashCode>
+      <FileName>Moves\Castle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.DoublePawn" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\DoublePawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.EnPassant" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\Enpassant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Move" Collapsed="true">
+    <Position X="10" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.NormalMove" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\NormalMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.PawnPromotion" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAIQIAAAAAAAA=</HashCode>
+      <FileName>Moves\PawnPromotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

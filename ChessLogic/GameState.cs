@@ -93,6 +93,7 @@ namespace ChessLogic
             Move bestMove = aiChess.GetBestMove(this);
             if (bestMove != null)
             {
+                CheckForGameOver();
                 MakeMove(bestMove);
             }
         }

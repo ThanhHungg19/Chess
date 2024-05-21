@@ -2,10 +2,9 @@
 {
     public class AIChess
     {
-        // Singleton instance of AIChess, ensuring there's only one instance
+        // Singleton pattern of AI chess
         public static AIChess Instance { get; } = new AIChess();
 
-        // Random number generator, could be used for move selection in case of tie or random move generation
         private static readonly Random Random = new Random();
 
         // The maximum depth for the Minimax algorithm. This determines how many moves ahead the AI will consider
@@ -21,15 +20,8 @@
         public Move GetBestMove(GameState gameState)
         {
             // Call the Minimax algorithm to get the best move, starting at the maximum depth and assuming the AI is the maximizing player
-            var bestMoveResult = Minimax(gameState, maxDepth, int.MinValue, int.MaxValue, true);
-            Move bestMove = bestMoveResult.move;
-
-            // If no best move, AI will make a random move
-            if (bestMove == null)
-            {
-                bestMove = GetRandomMove(gameState);
-            }
-            return bestMove; 
+            var bestMove = Minimax(gameState, maxDepth, int.MinValue, int.MaxValue, true);
+            return bestMove.move;
         }
 
         // Minimax algorithm with alpha-beta pruning to find the best move
@@ -117,12 +109,12 @@
 
             // Make the move on the new game state
             newState.MakeMove(move);
+            // Check is game over 
+            newState.IsGameOver();
 
             // Switch the player to the opponent
             newState.SwitchPlayer();
 
-            // Check is game over 
-            newState.IsGameOver();
             return newState;
         }
 
@@ -149,12 +141,6 @@
             }
 
             return score; // Return the calculated score
-        }
-
-        private Move GetRandomMove(GameState gameState)
-        {
-            IEnumerable<Move> legalMoves = gameState.AllLegalMovesFor(gameState.CurrentPlayer);
-            return legalMoves.ElementAt(Random.Next(legalMoves.Count()));
         }
 
 
