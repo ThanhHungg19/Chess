@@ -2,6 +2,7 @@
 {
     public class AIChess
     {
+
         // Singleton pattern of AI chess
         public static AIChess Instance { get; } = new AIChess();
 
@@ -96,6 +97,7 @@
                     {
                         break; // Prune the search tree
                     }
+                    
                 }
 
                 return (bestMove, minEval);
@@ -148,11 +150,11 @@
         {
             return piece.Type switch
             {
-                PieceType.Pawn => 1, 
-                PieceType.Knight => 3, 
-                PieceType.Bishop => 3, 
-                PieceType.Rook => 5, 
-                PieceType.Queen => 9, 
+                PieceType.Pawn => 10, 
+                PieceType.Knight => 30, 
+                PieceType.Bishop => 30, 
+                PieceType.Rook => 50, 
+                PieceType.Queen => 90, 
                 PieceType.King => 1000, 
                 _ => 0 
             };
