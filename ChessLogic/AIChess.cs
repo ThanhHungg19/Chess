@@ -14,7 +14,7 @@
         // Private constructor for the singleton pattern
         private AIChess()
         {
-            maxDepth = 3; // Can only maximum depth is 3
+            maxDepth = 4; // Can only maximum depth is 4
         }
 
     

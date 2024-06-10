@@ -19,6 +19,7 @@
         {
             new NormalMove(FromPos, ToPos).Execute(board);
             board[capturePos] = null;
+    
 
             return true;
         }
