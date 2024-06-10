@@ -1,7 +1,8 @@
 
 # ChessAI Minimax with Alpha Beta Pruning - Author: Nguyễn Thành Hưng
 
-
+## Purpose
+This is a small project for my Data Structure and Algorithms course. I would like to express my special thanks to my advisor, Dr. Vi Chi Thanh, for his guidance and support throughout this course.
 
 
 ## Overview
